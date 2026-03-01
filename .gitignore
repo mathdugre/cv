@@ -1,3 +1,6 @@
 cv*
 !cv*.tex
 !cv*.bib
+
+# OSX
+.DS_Store
