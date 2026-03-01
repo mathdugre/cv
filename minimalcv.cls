@@ -14,8 +14,31 @@
 \RequirePackage{ifxetex,ifluatex}
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
-\RequirePackage{hyperref}
+\RequirePackage[colorlinks=true, allcolors=black]{hyperref}
 \RequirePackage{etoolbox}
+
+% ----------------------------------------------------------
+% Bold author names in bibliography
+% ----------------------------------------------------------
+\RequirePackage[backend=biber,style=ieee,defernumbers=true,maxbibnames=99,sorting=ydnt]{biblatex}
+\addbibresource{cv.bib}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
 
 % ----------------------------------------------------------
 % Fonts
@@ -77,7 +100,7 @@
     \raggedright \textbf{#1}
   \end{minipage}%
   \begin{minipage}[t]{0.82\textwidth}
-    \textbf{#2} \hfill \textit{#3} 
+    \textbf{#2} \hfill \textit{#3}
     \ifstrempty{#4}{}{\\#4\par}
   \end{minipage}
   \par\vspace{0.75em}
