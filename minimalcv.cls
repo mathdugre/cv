@@ -96,7 +96,7 @@
 % ----------------------------------------------------------
 \newcommand{\cventry}[4]{%
   \noindent
-  \begin{minipage}[t]{0.15\textwidth}
+  \begin{minipage}[t]{0.16\textwidth}
     \raggedright \textbf{#1}
   \end{minipage}%
   \begin{minipage}[t]{0.82\textwidth}
@@ -108,11 +108,26 @@
 
 \newcommand{\cvitem}[3]{%
   \noindent
-  \begin{minipage}[t]{0.15\textwidth}
+  \begin{minipage}[t]{0.16\textwidth}
     \raggedright \textbf{#1}
   \end{minipage}%
   \begin{minipage}[t]{0.82\textwidth}
     #2 \hfill \textit{#3}
+  \end{minipage}
+  \par\vspace{0.5em}
+}
+
+\newcommand{\cvtalk}[3]{%
+  \noindent
+  \begin{minipage}[t]{0.16\textwidth}
+    \raggedright \textbf{#1}
+  \end{minipage}%
+  \begin{minipage}[t]{0.5\textwidth}
+    #2
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{0.3\textwidth}
+    \raggedright \textit{#3}
   \end{minipage}
   \par\vspace{0.5em}
 }
