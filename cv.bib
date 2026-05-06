@@ -1,34 +1,3 @@
-@MISC{Alessandroni2023-qj,
-  title     = {{Recommendations for fostering Open Science at Concordia
-               University}},
-  author    = {Alessandroni, Nicolás and Byers-Heinlein, Krista and Alasmar,
-               Zaki and Bong, Ji Yae and Chalifour, Joshua and Dennie, Danielle
-               and Dugré, Mathieu and Fibla-Reixachs, Laia and Glatard, Tristan
-               and Harris, Rachel and Johnson, Aaron P and Khelifa, Rassim and
-               Kos, Gregor and Moore, Charlotte and Peres-Neto, Pedro R and
-               López Pérez, Melanie and Quirk, Erin and Sander-Montant, Andrea
-               and Savary, Paul and Steele, Christopher and Vermeire, Brian C
-               and Williams, Madison and {Concordia Open Science Working Group}},
-  publisher = {Concordia University},
-  date      = {2023},
-  doi       = {10.11573/SPECTRUM.LIBRARY.CONCORDIA.CA.00992647},
-  url       = {https://spectrum.library.concordia.ca/id/eprint/992647/}
-}
-
-@ARTICLE{Sokolowski2023-ln,
-  title        = {{Longitudinal brain structure changes in Parkinson’s disease:
-                  A replication study}},
-  author       = {Sokołowski, A and Bhagwat, N and Chatelain, Yohan and Dugré,
-                  Mathieu and Hanganu, A and Monchi, O and McPherson, Brent and
-                  Wang, Michelle and Poline, J B and Sharp, M and Glatard, T},
-  journaltitle = {PloS one},
-  volume       = {19},
-  date         = {2023-04-29},
-  doi          = {10.1371/journal.pone.0295069},
-  pmid         = {38295031},
-  url          = {https://dx.plos.org/10.1371/journal.pone.0295069}
-}
-
 @ARTICLE{Hayot-Sasson2022-kf,
   title        = {{Sea: A lightweight data-placement library for Big Data
                   scientific computing}},
@@ -38,34 +7,63 @@
   eprint       = {2207.01737},
   eprinttype   = {arXiv},
   eprintclass  = {cs.DC},
+  abstract     = {The recent influx of open scientific data has contributed to
+                  the transitioning of scientific computing from compute
+                  intensive to data intensive. Whereas many Big Data frameworks
+                  exist that minimize the cost of data transfers, few scientific
+                  applications integrate these frameworks or adopt
+                  data-placement strategies to mitigate the costs. Scientific
+                  applications commonly rely on well-established command-line
+                  tools that would require complete reinstrumentation in order
+                  to incorporate existing frameworks. We developed Sea as a
+                  means to enable data-placement strategies for scientific
+                  applications executing on HPC clusters without the need to
+                  reinstrument workflows. Sea leverages GNU C library
+                  interception to intercept POSIX-compliant file system calls
+                  made by the applications. We designed a performance model and
+                  evaluated the performance of Sea on a synthetic data-intensive
+                  application processing a representative neuroimaging dataset
+                  (the Big Brain). Our results demonstrate that Sea
+                  significantly improves performance, up to a factor of
+                  3$\times$.},
   url          = {http://arxiv.org/abs/2207.01737}
 }
 
-@ARTICLE{Kaur2021-yp,
-  title        = {{An analysis of security vulnerabilities in container images
-                  for scientific data analysis}},
-  author       = {Kaur, Bhupinder and Dugré, Mathieu and Hanna, Aiman and
-                  Glatard, Tristan},
-  journaltitle = {GigaScience},
-  volume       = {10},
-  issue        = {6},
-  date         = {2021-06-03},
-  doi          = {10.1093/gigascience/giab025},
-  pmc          = {PMC8173661},
-  pmid         = {34080631},
-  issn         = {2047-217X},
-  url          = {http://dx.doi.org/10.1093/gigascience/giab025},
+@ARTICLE{Dugre2023-il,
+  title        = {{Performance comparison of Dask and Apache Spark on HPC
+                  systems for neuroimaging}},
+  author       = {Dugré, Mathieu and Hayot-Sasson, Valérie and Glatard, Tristan},
+  journaltitle = {Concurrency and computation: practice \& experience},
+  publisher    = {Wiley},
+  volume       = {35},
+  issue        = {21},
+  pages        = {e7635},
+  date         = {2023-09-25},
+  doi          = {10.1002/cpe.7635},
+  abstract     = {SummaryThe general increase in data size and data sharing
+                  motivates the adoption of Big Data strategies in several
+                  scientific disciplines. However, while several options are
+                  available, no particular guidelines exist for selecting a Big
+                  Data engine. In this paper, we compare the runtime performance
+                  of two popular Big Data engines with Python APIs, Apache
+                  Spark, and Dask, in processing neuroimaging pipelines. Our
+                  experiments use three synthetic neuroimaging applications to
+                  process the 606 GB BigBrain image and an actual pipeline to
+                  process data from thousands of anatomical images. We benchmark
+                  these applications on a dedicated HPC cluster running the
+                  Lustre file system while using varying combinations of the
+                  number of nodes, file size, and task duration. Our results
+                  show that although there are slight differences between Dask
+                  and Spark, the performance of the engines is comparable for
+                  data‐intensive applications. However, Spark requires more
+                  memory than Dask, which can lead to slower runtime depending
+                  on configuration and infrastructure. In general, the limiting
+                  factor was the data transfer time. While both engines are
+                  suitable for neuroimaging, more efforts need to be put to
+                  reduce the data transfer time and the memory footprint of
+                  applications.},
+  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QVPqTAsAAAAJ&citation_for_view=QVPqTAsAAAAJ:zYLM7Y9cAGgC},
   language     = {en}
-}
-
-@ARTICLE{Dugre2019-ds,
-  title        = {{A performance comparison of dask and apache spark for
-                  data-intensive neuroimaging pipelines}},
-  author       = {Dugré, Mathieu and Hayot-Sasson, Valerie and Glatard, Tristan},
-  journaltitle = {2019 IEEE/ACM},
-  publisher    = {ieeexplore.ieee.org},
-  date         = {2019},
-  url          = {https://ieeexplore.ieee.org/abstract/document/8943502/}
 }
 
 @ARTICLE{Poline2023-lz,
@@ -95,21 +93,60 @@
   pmc          = {PMC10079825},
   pmid         = {37024500},
   issn         = {2052-4463},
+  abstract     = {We present the Canadian Open Neuroscience Platform (CONP)
+                  portal to answer the research community's need for flexible
+                  data sharing resources and provide advanced tools for search
+                  and processing infrastructure capacity. This portal differs
+                  from previous data sharing projects as it integrates datasets
+                  originating from a number of already existing platforms or
+                  databases through DataLad, a file level data integrity and
+                  access layer. The portal is also an entry point for searching
+                  and accessing a large number of standardized and containerized
+                  software and links to a computing infrastructure. It leverages
+                  community standards to help document and facilitate reuse of
+                  both datasets and tools, and already shows a growing community
+                  adoption giving access to more than 60 neuroscience datasets
+                  and over 70 tools. The CONP portal demonstrates the
+                  feasibility and offers a model of a distributed data and tool
+                  management system across 17 institutions throughout Canada.},
   url          = {http://dx.doi.org/10.1038/s41597-023-01946-1},
   language     = {en}
 }
 
-@ARTICLE{Sokolowski2024-aj,
-  title        = {{The impact of FreeSurfer versions on structural neuroimaging
-                  analyses of Parkinson’s disease}},
-  author       = {Sokołowski, Andrzej and Bhagwat, Nikhil and Kirbizakis,
-                  Dimitrios and Chatelain, Yohan and Dugré, Mathieu and Poline,
-                  Jean-Baptiste and Sharp, Madeleine and Glatard, Tristan},
-  journaltitle = {bioRxiv},
-  pages        = {2024.11. 11.623071},
-  date         = {2024-11-14},
-  doi          = {10.1101/2024.11.11.623071},
-  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=QVPqTAsAAAAJ:roLk4NBRz8UC}
+@ARTICLE{Kaur2021-yp,
+  title        = {{An analysis of security vulnerabilities in container images
+                  for scientific data analysis}},
+  author       = {Kaur, Bhupinder and Dugré, Mathieu and Hanna, Aiman and
+                  Glatard, Tristan},
+  journaltitle = {GigaScience},
+  volume       = {10},
+  issue        = {6},
+  date         = {2021-06-03},
+  doi          = {10.1093/gigascience/giab025},
+  pmc          = {PMC8173661},
+  pmid         = {34080631},
+  issn         = {2047-217X},
+  abstract     = {BACKGROUND: Software containers greatly facilitate the
+                  deployment and reproducibility of scientific data analyses in
+                  various platforms. However, container images often contain
+                  outdated or unnecessary software packages, which increases the
+                  number of security vulnerabilities in the images, widens the
+                  attack surface in the container host, and creates substantial
+                  security risks for computing infrastructures at large. This
+                  article presents a vulnerability analysis of container images
+                  for scientific data analysis. We compare results obtained with
+                  4 vulnerability scanners, focusing on the use case of
+                  neuroscience data analysis, and quantifying the effect of
+                  image update and minification on the number of
+                  vulnerabilities. RESULTS: We find that container images used
+                  for neuroscience data analysis contain hundreds of
+                  vulnerabilities, that software updates remove roughly
+                  two-thirds of these vulnerabilities, and that removing unused
+                  packages is also effective. CONCLUSIONS: We provide
+                  recommendations on how to build container images with fewer
+                  vulnerabilities.},
+  url          = {http://dx.doi.org/10.1093/gigascience/giab025},
+  language     = {en}
 }
 
 @ARTICLE{Dugre2025-fs,
@@ -120,6 +157,26 @@
   pages        = {giae098},
   date         = {2025-03-03},
   doi          = {10.1093/gigascience/giae098},
+  abstract     = {Magnetic Resonance Image (MRI) pre-processing is a critical
+                  step for neuroimaging analysis. However, the computational
+                  cost of MRI pre-processing pipelines is a major bottleneck for
+                  large cohort studies and some clinical applications. While
+                  High-Performance Computing (HPC) and, more recently, Deep
+                  Learning have been adopted to accelerate the computations,
+                  these techniques require costly hardware and are not
+                  accessible to all researchers. Therefore, it is important to
+                  understand the performance bottlenecks of MRI pre-processing
+                  pipelines to improve their performance. Using Intel VTune
+                  profiler, we characterized the bottlenecks of several commonly
+                  used MRI-preprocessing pipelines from the ANTs, FSL, and
+                  FreeSurfer toolboxes. We found that few functions contributed
+                  to most of the CPU time, and that linear interpolation was the
+                  largest contributor. Data access was also a substantial
+                  bottleneck. We identified a bug in the ITK library that
+                  impacts the performance of ANTs pipeline in single-precision
+                  and a potential issue with the OpenMP scaling in FreeSurfer
+                  recon-all. Our results provide a reference for future efforts
+                  to optimize MRI pre-processing pipelines.},
   url          = {http://dx.doi.org/10.1093/gigascience/giae098}
 }
 
@@ -135,42 +192,152 @@
   pages        = {2023.05.05.539590},
   date         = {2023-05-05},
   doi          = {10.1101/2023.05.05.539590},
+  abstract     = {Background The availability of reliable biomarkers of
+                  Parkinson’s disease (PD) progression is critical to the
+                  understanding of the disease and development of treatment
+                  options. Magnetic Resonance Imaging (MRI) provides a promising
+                  source of PD biomarkers, however, neuroimaging results have
+                  been shown to be markedly sensitive to analytical conditions
+                  and population sampling, which motivates investigations of
+                  their robustness. This study is part of a project to
+                  investigate the replicability of 11 structural MRI measures of
+                  PD identified in a recent review. Objective This paper
+                  attempts to reproduce (similar data, similar analysis) and
+                  replicate (variations in data and analysis) the design of the
+                  machine learning (ML) model described in [1] to predict PD
+                  progression from T1-weighted MRIs. Methods We used the
+                  Parkinson’s Progression Markers Initiative dataset (PPMI,
+                  ppmi-info.org) used in [1] and we followed as closely as
+                  possible the original methods. We also investigated slight
+                  methodological variations in cohort selection, feature
+                  extraction, ML model design, and evaluation techniques.
+                  Results The Area under the ROC Curve (AUC) achieved by our
+                  model closely reproducing the original study remained lower
+                  than 0.5. Across all tested models, we obtained a peak AUC of
+                  0.685, which is better than chance performance but remained
+                  lower than the AUC value of 0.795 reported in [1]. Conclusion
+                  We managed to train a model that predicts disease progression
+                  with a performance better than chance on a cohort extracted
+                  from the PPMI dataset, using methods adapted from [1].
+                  However, the performance of this model remains substantially
+                  lower than the one reported in [1]. Our difficulties to
+                  reproduce or replicate the original work are likely explained
+                  by the relatively low sample size in the original study. We
+                  provide recommendations on how to improve the reproducibility
+                  of MRI-based ML models of PD in the future.},
   url          = {http://biorxiv.org/lookup/doi/10.1101/2023.05.05.539590},
   urldate      = {2024-01-22},
   language     = {en}
 }
 
-@ARTICLE{Dugre2023-il,
-  title        = {{Performance comparison of Dask and Apache Spark on HPC
-                  systems for neuroimaging}},
-  author       = {Dugré, Mathieu and Hayot-Sasson, Valérie and Glatard, Tristan},
-  journaltitle = {Concurrency and computation: practice \& experience},
-  publisher    = {Wiley},
-  volume       = {35},
-  issue        = {21},
-  pages        = {e7635},
-  date         = {2023-09-25},
-  doi          = {10.1002/cpe.7635},
-  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&user=QVPqTAsAAAAJ&citation_for_view=QVPqTAsAAAAJ:zYLM7Y9cAGgC},
-  language     = {en}
+@ARTICLE{Sokolowski2024-aj,
+  title        = {{The impact of FreeSurfer versions on structural neuroimaging
+                  analyses of Parkinson’s disease}},
+  author       = {Sokołowski, Andrzej and Bhagwat, Nikhil and Kirbizakis,
+                  Dimitrios and Chatelain, Yohan and Dugré, Mathieu and Poline,
+                  Jean-Baptiste and Sharp, Madeleine and Glatard, Tristan},
+  journaltitle = {bioRxiv},
+  pages        = {2024.11. 11.623071},
+  date         = {2024-11-14},
+  doi          = {10.1101/2024.11.11.623071},
+  abstract     = {AbstractImage processing software impacts the quantification
+                  of brain measures, playing an important role in the search for
+                  clinical biomarkers. We investigated the impact of the
+                  variability between FreeSurfer releases on the estimation of
+                  structural brain measures in Parkinson’s disease (PD).
+                  Structural brain scans from 106 controls and 209 patients were
+                  analyzed with FreeSurfer versions 5.3, 6.0.1, and 7.3.2,
+                  including longitudinal data from 125 patients. First, we
+                  measured the differences in the estimation of volume, surface
+                  area, and cortical thickness between FreeSurfer versions.
+                  Second, we focused on the relationship between MRI-derived
+                  brain measures and group differences as well as disease
+                  severity clinical outcomes, which were evaluated both
+                  cross-sectionally and longitudinally. We found high
+                  software-induced variability in the estimation of all three
+                  structural measures, which impacted clinical outcomes. There
+                  were differences between software versions in group
+                  differences between patients and healthy controls in
+                  subcortical volume and vertex-wise cortical thickness.
+                  Software variability also impacted the estimated relationship
+                  between brain structure and disease severity in patients.
+                  Hence, software variability not only relates to the estimation
+                  of structural measures, but it also impacts clinically-
+                  relevant MRI measures. Our study provides insight into the
+                  reproducibility of structural neuroimaging studies in PD
+                  populations.},
+  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=QVPqTAsAAAAJ:roLk4NBRz8UC}
 }
 
-@ARTICLE{Urchs2025-nm,
-  title        = {{Adopting open-science infrastructure in the
-                  ENIGMA-Parkinson’s Disease consortium: A case study}},
-  author       = {Urchs, Sebastian and Bhagwat, Nikhil and d'Angremont, Emile
-                  and van Heese, Eva and Dai, Alyssa and Dugré, Mathieu and
-                  Laansma, Max and McPherson, Brent and Wang, Michelle and van
-                  Balkom, Tim and Berendse, Henk and Dortmond, Anna and Goltz,
-                  Franziska and Dagher, Alain and Helmich, Rick and van den
-                  Heuvel, Odile and Johansson, Martin and van Laar, Teus and
-                  Postma, Elbrich and Jahanshad, Neda and Thompson, Paul and
-                  Vriend, Chris and van der Werf, Ysbrand and Poline,
-                  Jean-Baptiste},
-  journaltitle = {OSF},
-  date         = {2025-09-18},
-  doi          = {10.31222/osf.io/dc5ey_v1},
-  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=QVPqTAsAAAAJ:UebtZRa9Y70C}
+@MISC{Alessandroni2023-qj,
+  title     = {{Recommendations for fostering Open Science at Concordia
+               University}},
+  author    = {Alessandroni, Nicolás and Byers-Heinlein, Krista and Alasmar,
+               Zaki and Bong, Ji Yae and Chalifour, Joshua and Dennie, Danielle
+               and Dugré, Mathieu and Fibla-Reixachs, Laia and Glatard, Tristan
+               and Harris, Rachel and Johnson, Aaron P and Khelifa, Rassim and
+               Kos, Gregor and Moore, Charlotte and Peres-Neto, Pedro R and
+               López Pérez, Melanie and Quirk, Erin and Sander-Montant, Andrea
+               and Savary, Paul and Steele, Christopher and Vermeire, Brian C
+               and Williams, Madison and {Concordia Open Science Working Group}},
+  publisher = {Concordia University},
+  date      = {2023},
+  doi       = {10.11573/SPECTRUM.LIBRARY.CONCORDIA.CA.00992647},
+  abstract  = {Open science—and open scholarship more broadly—is revolutionizing
+               how research is conducted by democratizing access to knowledge
+               and bringing inclusion and transparency to the forefront. By
+               making research processes and products open and accessible to
+               all, open science promotes fairness, efficiency, and
+               accountability in the scholarly enterprise and ensures that the
+               benefits of scientific and humanistic progress are shared with
+               all segments of society. In Canada, fostering the practical
+               implementation of open science practices (e.g., open access, open
+               educational resources, open data, open labs, open notebooks, open
+               evaluation, open hardware, open-source software, and citizen
+               science) is rapidly becoming a top priority. The Government of
+               Canada’s Roadmap for Open Science envisions a complete transition
+               to an "open by design and by default" model by 2025. This
+               transition is underway, with policies being promoted by federal
+               and provincial funding agencies. For example, the federal funding
+               agencies, also known as the Tri-Council, have enacted an
+               open-access policy requiring grant recipients to ensure that
+               publications funded by the agencies are freely accessible within
+               12 months of publication. This can be achieved by depositing
+               peer-reviewed manuscripts in institutional or disciplinary
+               repositories or publishing them in open-access journals.
+               Departing from the Tri-Agency model and aligning with Plan S, the
+               Fonds de Recherche du Québec (FRQ) updated its Open-Access Policy
+               in 2022, requiring that articles and theses be made freely
+               available under an open license upon publication or institutional
+               deposit. The fast-approaching date of 2025, in combination with
+               new mandates and policies, will require institutional support and
+               advocacy to achieve effective solutions. On May 27, 2022,
+               Concordia University took a decisive step towards advancing open
+               science by hosting the Open Science @Concordia conference, which
+               brought together a diverse group of open science advocates and
+               stakeholders from Concordia University and other institutions.
+               The conference included keynote talks by national and
+               international speakers, interdisciplinary lightning-talk
+               sessions, and roundtables. Ten national and international
+               speakers presented on topics like open access, open data, open
+               infrastructures, open educational resources, and citizen science.
+               Jessica Polka (ASAPbio, USA) delivered a powerful keynote on the
+               pressures of publishing with preprints, and Malvika Sharan (The
+               Turing Way, UK) presented on fostering open communities. Building
+               upon the momentum generated from the conference, we established
+               the Concordia Open Science Working Group, whose first workshop
+               was held on September 30, 2022. During this half-day session,
+               more than 20 faculty members, trainees, and students from 8
+               different academic units, including Psychology, Computer Science
+               and Software Engineering, Chemistry and Biochemistry, Biology,
+               Mechanical, Industrial, and Aerospace Engineering, Education,
+               Communication Studies, and the Library, gathered at the Loyola
+               Campus to explore the challenges and possibilities of promoting
+               open science at Concordia. This report presents the key insights
+               derived from this workshop, as well as a comprehensive
+               examination of the methodologies used and a full account of the
+               results.},
+  url       = {https://spectrum.library.concordia.ca/id/eprint/992647/}
 }
 
 @ARTICLE{Alessandroni2025-oz,
@@ -185,7 +352,70 @@
   publisher = {Concordia University},
   date      = {2025-05-16},
   doi       = {10.11573/spectrum.library.concordia.ca.00995690},
+  abstract  = {This entry presents the Senate Resolution on Open Science and
+               Open Scholarship, unanimously approved by Concordia University’s
+               Senate on May 16, 2025. Building on Concordia’s longstanding
+               leadership in open access, this resolution broadens the
+               university’s commitment to a wide range of open
+               practices—including open data, open code, open-source software,
+               open educational resources, and citizen science. Developed
+               through an extensive, university-wide consultation process led by
+               the Concordia Open Science Working Group, the resolution outlines
+               a framework for advancing open practices across disciplines. It
+               reflects three core aims: supporting implementation through
+               training, infrastructure, and policy development; encouraging
+               Concordians to engage with and adopt Open Science and Open
+               Scholarship practices; and fostering recognition of these
+               contributions within academic and research environments.},
   url       = {https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=QVPqTAsAAAAJ:Se3iqnhoufwC}
+}
+
+@ARTICLE{Sokolowski2023-ln,
+  title        = {{Longitudinal brain structure changes in Parkinson’s disease:
+                  A replication study}},
+  author       = {Sokołowski, A and Bhagwat, N and Chatelain, Yohan and Dugré,
+                  Mathieu and Hanganu, A and Monchi, O and McPherson, Brent and
+                  Wang, Michelle and Poline, J B and Sharp, M and Glatard, T},
+  journaltitle = {PloS one},
+  volume       = {19},
+  date         = {2023-04-29},
+  doi          = {10.1371/journal.pone.0295069},
+  pmid         = {38295031},
+  abstract     = {Context An existing major challenge in Parkinson’s disease
+                  (PD) research is the identification of biomarkers of disease
+                  progression. While Magnetic Resonance Imaging (MRI) is a
+                  potential source of PD biomarkers, none of the MRI measures of
+                  PD are robust enough to warrant their adoption in clinical
+                  research. This study is part of a project that aims to
+                  replicate 11 PD studies reviewed in a recent survey (JAMA
+                  neurology, 78(10) 2021) to investigate the robustness of PD
+                  neuroimaging findings to data and analytical variations.
+                  Objective This study attempts to replicate the results in
+                  Hanganu et al. (Brain, 137(4) 2014) using data from the
+                  Parkinson’s Progression Markers Initiative (PPMI). Methods
+                  Using 25 PD subjects and 18 healthy controls, we analyzed the
+                  rate of change of cortical thickness and of the volume of
+                  subcortical structures, and we measured the relationship
+                  between MRI structural changes and cognitive decline. We
+                  compared our findings to the results in the original study.
+                  Results Similarly to the original study, PD patients with mild
+                  cognitive impairment (MCI) exhibited increased cortical
+                  thinning over time compared to patients without MCI in the
+                  right middle temporal gyrus, insula, and precuneus. (2) The
+                  rate of cortical thinning in the left inferior temporal and
+                  precentral gyri in PD patients correlated with the change in
+                  cognitive performance. (3) There were no group differences in
+                  the change of subcortical volumes. (4) We did not find a
+                  relationship between the change in subcortical volumes and the
+                  change in cognitive performance. Conclusion Despite important
+                  differences in the dataset used in this replication study, and
+                  despite differences in sample size, we were able to partially
+                  replicate the original results. We produced a publicly
+                  available reproducible notebook allowing researchers to
+                  further investigate the reproducibility of the results in
+                  Hanganu et al. (2014) when more data becomes available in
+                  PPMI.},
+  url          = {https://dx.plos.org/10.1371/journal.pone.0295069}
 }
 
 @ARTICLE{Germani2025-hv,
@@ -205,6 +435,98 @@
   pmc          = {PMC11844873},
   pmid         = {39982930},
   issn         = {1932-6203},
+  abstract     = {Parkinson's disease (PD) is a common neurodegenerative
+                  disorder with a poorly understood physiopathology and no
+                  established biomarkers for the diagnosis of early stages and
+                  for prediction of disease progression. Several neuroimaging
+                  biomarkers have been studied recently, but these are
+                  susceptible to several sources of variability related for
+                  instance to cohort selection or image analysis. In this
+                  context, an evaluation of the robustness of such biomarkers to
+                  variations in the data processing workflow is essential. This
+                  study is part of a larger project investigating the
+                  replicability of potential neuroimaging biomarkers of PD.
+                  Here, we attempt to fully reproduce (reimplementing the
+                  experiments with the same methods, including data collection
+                  from the same database) and replicate (different data and/or
+                  method) the models described in (Nguyen et al., 2021) to
+                  predict individual's PD current state and progression using
+                  demographic, clinical and neuroimaging features (fALFF and
+                  ReHo extracted from resting-state fMRI). We use the
+                  Parkinson's Progression Markers Initiative dataset (PPMI,
+                  ppmi-info.org), as in (Nguyen et al., 2021) and aim to
+                  reproduce the original cohort, imaging features and machine
+                  learning models as closely as possible using the information
+                  available in the paper and the code. We also investigated
+                  methodological variations in cohort selection, feature
+                  extraction pipelines and sets of input features. Different
+                  criteria were used to evaluate the reproduction attempt and
+                  compare the results with the original ones. Notably, we
+                  obtained significantly better than chance performance using
+                  the analysis pipeline closest to that in the original study
+                  (R2 > 0), which is consistent with its findings. In addition,
+                  we performed a partial reproduction using derived data
+                  provided by the authors of the original study, and we obtained
+                  results that were close to the original ones. The challenges
+                  encountered while attempting to reproduce (fully and
+                  partially) and replicating the original work are likely
+                  explained by the complexity of neuroimaging studies, in
+                  particular in clinical settings. We provide recommendations to
+                  further facilitate the reproducibility of such studies in the
+                  future.},
   url          = {http://dx.doi.org/10.1371/journal.pone.0317566},
   language     = {en}
+}
+
+@ARTICLE{Urchs2025-nm,
+  title        = {{Adopting open-science infrastructure in the
+                  ENIGMA-Parkinson’s Disease consortium: A case study}},
+  author       = {Urchs, Sebastian and Bhagwat, Nikhil and d'Angremont, Emile
+                  and van Heese, Eva and Dai, Alyssa and Dugré, Mathieu and
+                  Laansma, Max and McPherson, Brent and Wang, Michelle and van
+                  Balkom, Tim and Berendse, Henk and Dortmond, Anna and Goltz,
+                  Franziska and Dagher, Alain and Helmich, Rick and van den
+                  Heuvel, Odile and Johansson, Martin and van Laar, Teus and
+                  Postma, Elbrich and Jahanshad, Neda and Thompson, Paul and
+                  Vriend, Chris and van der Werf, Ysbrand and Poline,
+                  Jean-Baptiste},
+  journaltitle = {OSF},
+  date         = {2025-09-18},
+  doi          = {10.31222/osf.io/dc5ey_v1},
+  abstract     = {The adoption of open science principles for data has been
+                  instrumental in enabling the creation and reuse of large
+                  datasets and efficient collaboration, but requires a dedicated
+                  open data sharing infrastructure. Although clinical
+                  neuroscience research increasingly involves large-scale
+                  collaboration on controlled, sensitive data, open science
+                  principles can bring key benefits in this setting. The unique
+                  privacy and access requirements of clinical research create
+                  challenges that require a specialized data infrastructure,
+                  focused on local governance. Here we present a narrative
+                  account of a pilot project to establish such an infrastructure
+                  for the data of the ENIGMA Parkinson’s Disease working group
+                  by adopting the decentralized Nipoppy and Neurobagel tool
+                  stack. Our collaboration has led to the adoption of community
+                  data standards among international sites of the working group
+                  and has launched an open portal that enables the cross-site
+                  discovery of cohorts based on harmonized metadata. We discuss
+                  our approach to this collaboration, the social and technical
+                  challenges we have encountered and how we addressed them in
+                  the hope that groups in similar situations may benefit from
+                  our experiences.},
+  url          = {https://scholar.google.com/citations?view_op=view_citation&hl=en&citation_for_view=QVPqTAsAAAAJ:UebtZRa9Y70C}
+}
+
+@ARTICLE{Dugre2019-ds,
+  title        = {{A performance comparison of dask and apache spark for
+                  data-intensive neuroimaging pipelines}},
+  author       = {Dugré, Mathieu and Hayot-Sasson, Valerie and Glatard, Tristan},
+  journaltitle = {2019 IEEE/ACM},
+  publisher    = {ieeexplore.ieee.org},
+  date         = {2019},
+  abstract     = {In the past few years, neuroimaging has entered the Big Data
+                  era due to the joint increase in image resolution, data
+                  sharing, and study sizes. However, no particular Big Data
+                  engines …},
+  url          = {https://ieeexplore.ieee.org/abstract/document/8943502/}
 }
